@@ -1,0 +1,37 @@
+{
+  "brand.name": "aiflai",
+  "nav.my_trips": "Mis viajes",
+  "nav.my_profile": "Mi perfil",
+  "trips.add": "Añadir viaje",
+  "trips.added": "¡Añadido!",
+  "trips.draft": "borrador",
+  "profile.connect_email": "Conecta tu correo",
+  "profile.connect_desc": "Tras conectar, aiflai.com leerá tus correos de reservas para identificar vuelos, coches de alquiler, hoteles y actividades.",
+  "profile.continue_google": "Continuar con Google",
+  "profile.continue_outlook": "Continuar con Outlook",
+  "profile.forwarding": "Dirección de reenvío",
+  "profile.forwarding_desc": "Reenvía correos de reserva a tu dirección personal de aiflai.com y los importaremos automáticamente.",
+  "profile.copy": "Copiar",
+  "profile.copied": "Copiado",
+  "modal.trip_details": "Detalles del viaje",
+  "modal.close_label": "Cerrar detalles del viaje",
+  "tab.trips": "Viajes",
+  "tab.profile": "Perfil",
+  "alert.connect_google": "Conectar Google: enlaza con tu ruta de OAuth.",
+  "alert.connect_outlook": "Conectar Outlook: enlaza con tu ruta de OAuth.",
+  "lang.english": "English",
+  "lang.spanish": "Español",
+  "lang.select_label": "Idioma"
+  ,
+  "add.trip_title": "Crear nuevo viaje",
+  "add.destination_label": "Ciudad de destino",
+  "add.start_label": "Fecha de entrada",
+  "add.end_label": "Fecha de salida",
+  "add.create_btn": "Crear viaje",
+  "add.cancel_btn": "Cancelar",
+  "add.post_create_hint": "Ahora puedes importar desde tu correo o reenviar tus reservas a tu dirección de aiflai.",
+  "add.import_email_btn": "Importar desde correo",
+  "add.forward_later_btn": "Los reenviaré más tarde"
+}
+
+

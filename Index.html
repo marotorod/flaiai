@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  />
+  <title>aiflai.com — Trip Planner</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <svg class="logo" viewBox="0 0 64 64" aria-hidden="true">
+        <!-- Simple confluence of planes icon -->
+        <defs>
+          <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#3b82f6"/>
+            <stop offset="100%" stop-color="#06b6d4"/>
+          </linearGradient>
+        </defs>
+        <!-- Plane 1 -->
+        <path d="M8 34 l48 -12 -18 10 6 8 -8 4 -6 -8 -22 -2 z" fill="url(#g)" opacity="0.9"/>
+        <!-- Plane 2 (rotated, overlapped) -->
+        <path d="M12 28 l40 22 -20 -2 -2 8 -8 -2 2 -8 -12 -18 z" fill="url(#g)" opacity="0.6"/>
+        <!-- Hub dot -->
+        <circle cx="30" cy="32" r="3" fill="#0ea5e9" />
+      </svg>
+      <span class="brand-text" data-i18n="brand.name">aiflai</span>
+    </div>
+  </header>
+
+  <main class="layout">
+    <!-- Desktop sidebar -->
+    <nav class="sidebar" aria-label="Primary">
+      <button class="tab-btn is-active" data-target="trips" aria-controls="panel-trips" aria-selected="true" data-i18n="nav.my_trips">My trips</button>
+      <button class="tab-btn" data-target="profile" aria-controls="panel-profile" aria-selected="false" data-i18n="nav.my_profile">My profile</button>
+    </nav>
+
+    <!-- Content panels -->
+    <section class="panels">
+      <!-- My trips -->
+      <div id="panel-trips" class="panel is-active" role="region" aria-labelledby="tab-trips">
+        <div class="panel-header">
+          <h1 data-i18n="nav.my_trips">My trips</h1>
+          <button id="addTripBtn" class="btn primary">
+            <span aria-hidden="true">＋</span> <span data-i18n="trips.add">Add a new trip</span>
+          </button>
+        </div>
+
+        <ul id="tripList" class="trip-list" aria-live="polite">
+          <li class="trip-item">
+            <button class="trip-card" data-destination="tokyo" style="background-image: linear-gradient(135deg, rgba(0,0,0,0.4), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400&h=200&fit=crop&crop=center');">
+              <div class="trip-header">
+                <div class="trip-destination">Tokyo, Japan</div>
+                <div class="trip-dates">
+                  <span class="trip-date">Dec 15, 2024</span>
+                  <span class="trip-arrow">→</span>
+                  <span class="trip-date">Dec 22, 2024</span>
+                </div>
+              </div>
+              <div class="trip-details">
+                <div class="trip-passengers">2 adults, 1 child</div>
+                <div class="trip-meta">Imported from email • 2 flights · 1 hotel</div>
+              </div>
+            </button>
+          </li>
+          <li class="trip-item">
+            <button class="trip-card" data-destination="Olmedo" style="background-image: linear-gradient(135deg, rgba(0,0,0,0.4), rgba(0,0,0,0.2)), url('https://www.civitatis.com/f/espana/olmedo/olmedo.jpg');">
+              <div class="trip-header">
+                <div class="trip-destination">Olmedo, Valladolid</div>
+                <div class="trip-dates">
+                  <span class="trip-date">Jan 8, 2025</span>
+                  <span class="trip-arrow">→</span>
+                  <span class="trip-date">Jan 15, 2025</span>
+                </div>
+              </div>
+              <div class="trip-details">
+                <div class="trip-passengers">1 adult</div>
+                <div class="trip-meta">Added manually • draft</div>
+              </div>
+            </button>
+          </li>
+          <li class="trip-item">
+            <button class="trip-card" data-destination="barcelona" style="background-image: linear-gradient(135deg, rgba(0,0,0,0.4), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=400&h=200&fit=crop&crop=center');">
+              <div class="trip-header">
+                <div class="trip-destination">Barcelona, Spain</div>
+                <div class="trip-dates">
+                  <span class="trip-date">Feb 20, 2025</span>
+                  <span class="trip-arrow">→</span>
+                  <span class="trip-date">Feb 27, 2025</span>
+                </div>
+              </div>
+              <div class="trip-details">
+                <div class="trip-passengers">2 adults, 1 infant</div>
+                <div class="trip-meta">Imported from email • 1 car rental</div>
+              </div>
+            </button>
+          </li>
+          <li class="trip-item">
+            <button class="trip-card" data-destination="newyork" style="background-image: linear-gradient(135deg, rgba(0,0,0,0.4), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=400&h=200&fit=crop&crop=center');">
+              <div class="trip-header">
+                <div class="trip-destination">New York, USA</div>
+                <div class="trip-dates">
+                  <span class="trip-date">Mar 10, 2025</span>
+                  <span class="trip-arrow">→</span>
+                  <span class="trip-date">Mar 17, 2025</span>
+                </div>
+              </div>
+              <div class="trip-details">
+                <div class="trip-passengers">2 adults</div>
+                <div class="trip-meta">Added manually • 2 flights · 1 hotel</div>
+              </div>
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- My profile -->
+      <div id="panel-profile" class="panel" role="region" aria-labelledby="tab-profile">
+        <h1 data-i18n="nav.my_profile">My profile</h1>
+
+        <section class="card">
+          <h2 data-i18n="profile.connect_email">Connect your email</h2>
+          <p class="muted" data-i18n="profile.connect_desc">After connecting, aiflai.com will read your booking emails to identify flights, car rentals, hotels, and activities.</p>
+          <div class="connect-grid">
+            <button id="connectGoogle" class="btn google" aria-label="Connect with Google Mail">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#EA4335" d="M12 10.2v3.6h5.1c-.2 1.2-1.5 3.6-5.1 3.6-3.1 0-5.6-2.6-5.6-5.7S8.9 6 12 6c1.8 0 3 .8 3.7 1.4l2.5-2.4C16.8 3.6 14.6 2.7 12 2.7 6.9 2.7 2.7 6.9 2.7 12S6.9 21.3 12 21.3c6.1 0 9.1-4.3 9.1-8.7 0-.6-.1-1-.1-1.4H12z"/></svg>
+              <span data-i18n="profile.continue_google">Continue with Google</span>
+            </button>
+            <button id="connectOutlook" class="btn outlook" aria-label="Connect with Microsoft Outlook">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#2563EB" d="M3 5.5A1.5 1.5 0 0 1 4.5 4h8A1.5 1.5 0 0 1 14 5.5V8l6 1.5v9A1.5 1.5 0 0 1 18.5 20H14v-2.5L4.5 20A1.5 1.5 0 0 1 3 18.5v-13z"/></svg>
+              <span data-i18n="profile.continue_outlook">Continue with Outlook</span>
+            </button>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2 data-i18n="profile.forwarding">Forwarding address</h2>
+          <p class="muted" data-i18n="profile.forwarding_desc">Forward booking emails to your personal aiflai.com address and we’ll auto-import them.</p>
+          <div class="forward-box">
+            <code id="forwardEmail" class="forward-email">you+bookings@aiflai.com</code>
+            <button id="copyForwardEmail" class="btn ghost" data-copy="#forwardEmail" data-i18n="profile.copy">Copy</button>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2 data-i18n="lang.select_label">Language</h2>
+          <fieldset class="lang-fieldset">
+            <label class="radio">
+              <input type="radio" name="language" value="en" checked />
+              <span data-i18n="lang.english">English</span>
+            </label>
+            <label class="radio">
+              <input type="radio" name="language" value="es" />
+              <span data-i18n="lang.spanish">Español</span>
+            </label>
+          </fieldset>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <!-- Mobile tab bar -->
+  <nav class="tabbar" aria-label="Bottom navigation">
+    <button class="tab-btn is-active" data-target="trips" aria-controls="panel-trips" aria-selected="true">
+      <span aria-hidden="true">🧭</span>
+      <span class="tab-text" data-i18n="tab.trips">Trips</span>
+    </button>
+    <button class="tab-btn" data-target="profile" aria-controls="panel-profile" aria-selected="false">
+      <span aria-hidden="true">👤</span>
+      <span class="tab-text" data-i18n="tab.profile">Profile</span>
+    </button>
+  </nav>
+
+  <!-- Trip Detail Modal -->
+  <div id="tripDetailModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modal-title" class="modal-title" data-i18n="modal.trip_details">Trip Details</h2>
+        <button class="modal-close" aria-label="Close trip details" data-i18n-attr="aria-label" data-i18n="modal.close_label">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="trip-summary">
+          <div class="trip-destination-large"></div>
+          <div class="trip-dates-large"></div>
+          <div class="trip-passengers-large"></div>
+        </div>
+        <div class="trip-timeline" id="tripTimeline">
+          <!-- Timeline items will be populated by JavaScript -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Trip Modal -->
+  <div id="addTripModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="add-trip-title">
+    <div class="modal-backdrop" data-close="addTripModal"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="add-trip-title" class="modal-title" data-i18n="add.trip_title">Create new trip</h2>
+        <button class="modal-close" aria-label="Close" data-close="addTripModal" data-i18n-attr="aria-label" data-i18n="modal.close_label">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="addTripForm" class="form-grid">
+          <label class="form-field">
+            <span class="label" data-i18n="add.destination_label">Destination city</span>
+            <input id="addTripCity" type="text" placeholder="e.g. Barcelona" required />
+          </label>
+          <div class="form-row">
+            <label class="form-field">
+              <span class="label" data-i18n="add.start_label">Start date</span>
+              <input id="addTripStart" type="date" required />
+            </label>
+            <label class="form-field">
+              <span class="label" data-i18n="add.end_label">End date</span>
+              <input id="addTripEnd" type="date" required />
+            </label>
+          </div>
+          <div class="actions">
+            <button type="submit" class="btn primary" id="addTripCreateBtn" data-i18n="add.create_btn">Create trip</button>
+            <button type="button" class="btn ghost" id="addTripCancelBtn" data-close="addTripModal" data-i18n="add.cancel_btn">Cancel</button>
+          </div>
+        </form>
+        <div class="post-create" id="addTripPostCreate" hidden>
+          <p class="muted" data-i18n="add.post_create_hint">You can now import from your email or forward your bookings to your aiflai address.</p>
+          <div class="actions">
+            <button type="button" class="btn google" id="addTripImportEmail">
+              <span data-i18n="add.import_email_btn">Import from email</span>
+            </button>
+            <button type="button" class="btn" id="addTripForwardLater">
+              <span data-i18n="add.forward_later_btn">I'll forward them later</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="i18n.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

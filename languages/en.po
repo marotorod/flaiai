@@ -1,0 +1,97 @@
+msgid "brand.name"
+msgstr "aiflai"
+
+msgid "nav.my_trips"
+msgstr "My trips"
+
+msgid "nav.my_profile"
+msgstr "My profile"
+
+msgid "trips.add"
+msgstr "Add a new trip"
+
+msgid "trips.added"
+msgstr "Added!"
+
+msgid "trips.draft"
+msgstr "draft"
+
+msgid "profile.connect_email"
+msgstr "Connect your email"
+
+msgid "profile.connect_desc"
+msgstr "After connecting, aiflai.com will read your booking emails to identify flights, car rentals, hotels, and activities."
+
+msgid "profile.continue_google"
+msgstr "Continue with Google"
+
+msgid "profile.continue_outlook"
+msgstr "Continue with Outlook"
+
+msgid "profile.forwarding"
+msgstr "Forwarding address"
+
+msgid "profile.forwarding_desc"
+msgstr "Forward booking emails to your personal aiflai.com address and we’ll auto-import them."
+
+msgid "profile.copy"
+msgstr "Copy"
+
+msgid "profile.copied"
+msgstr "Copied"
+
+msgid "modal.trip_details"
+msgstr "Trip Details"
+
+msgid "modal.close_label"
+msgstr "Close trip details"
+
+msgid "tab.trips"
+msgstr "Trips"
+
+msgid "tab.profile"
+msgstr "Profile"
+
+msgid "alert.connect_google"
+msgstr "Connect Google: wire this to your OAuth route."
+
+msgid "alert.connect_outlook"
+msgstr "Connect Outlook: wire this to your OAuth route."
+
+msgid "lang.english"
+msgstr "English"
+
+msgid "lang.spanish"
+msgstr "Español"
+
+msgid "lang.select_label"
+msgstr "Language"
+
+msgid "add.trip_title"
+msgstr "Create new trip"
+
+msgid "add.destination_label"
+msgstr "Destination city"
+
+msgid "add.start_label"
+msgstr "Start date"
+
+msgid "add.end_label"
+msgstr "End date"
+
+msgid "add.create_btn"
+msgstr "Create trip"
+
+msgid "add.cancel_btn"
+msgstr "Cancel"
+
+msgid "add.post_create_hint"
+msgstr "You can now import from your email or forward your bookings to your aiflai address."
+
+msgid "add.import_email_btn"
+msgstr "Import from email"
+
+msgid "add.forward_later_btn"
+msgstr "I'll forward them later"
+
+

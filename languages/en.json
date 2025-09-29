@@ -1,0 +1,37 @@
+{
+  "brand.name": "aiflai",
+  "nav.my_trips": "My trips",
+  "nav.my_profile": "My profile",
+  "trips.add": "Add a new trip",
+  "trips.added": "Added!",
+  "trips.draft": "draft",
+  "profile.connect_email": "Connect your email",
+  "profile.connect_desc": "After connecting, aiflai.com will read your booking emails to identify flights, car rentals, hotels, and activities.",
+  "profile.continue_google": "Continue with Google",
+  "profile.continue_outlook": "Continue with Outlook",
+  "profile.forwarding": "Forwarding address",
+  "profile.forwarding_desc": "Forward booking emails to your personal aiflai.com address and we’ll auto-import them.",
+  "profile.copy": "Copy",
+  "profile.copied": "Copied",
+  "modal.trip_details": "Trip Details",
+  "modal.close_label": "Close trip details",
+  "tab.trips": "Trips",
+  "tab.profile": "Profile",
+  "alert.connect_google": "Connect Google: wire this to your OAuth route.",
+  "alert.connect_outlook": "Connect Outlook: wire this to your OAuth route.",
+  "lang.english": "English",
+  "lang.spanish": "Español",
+  "lang.select_label": "Language"
+  ,
+  "add.trip_title": "Create new trip",
+  "add.destination_label": "Destination city",
+  "add.start_label": "Start date",
+  "add.end_label": "End date",
+  "add.create_btn": "Create trip",
+  "add.cancel_btn": "Cancel",
+  "add.post_create_hint": "You can now import from your email or forward your bookings to your aiflai address.",
+  "add.import_email_btn": "Import from email",
+  "add.forward_later_btn": "I'll forward them later"
+}
+
+
